@@ -7,6 +7,7 @@
 
 window#waybar {
     background-color: #1E1E2E;
+    background: transparent;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -53,6 +54,23 @@ button {
     font-weight: bold;
 }
 
+#workspaces button.active {
+  background-color: @peach;
+  color: @surface0;
+}
+#workspaces button:hover {
+  background-color: @peach;
+  color: @surface0;
+}
+#workspaces button.active:hover {
+  background-color: @surface0;
+  color: @peach;
+}
+#workspaces button.hidden {
+  background-color: @surface0;
+  color: @pink;
+}
+
 
 #clock,
 #battery,
@@ -84,9 +102,11 @@ button {
 
 #custom-power{
   color: @red;
-  margin: 0 5px;
-  padding: 0 10px;
   font-weight: bold;
+  background-color: @surface0;
+  padding: 0 15px; 
+  margin: 0 5px;
+  border-radius: 5em / 5em;
 }
 
 #user,
@@ -100,9 +120,13 @@ button {
     color: @peach;
 }
 
+#user,
+#window {
+  background-color: @surface0;
+}
+
 #user {
   color: @green;
-  padding: 0 5px;
 }
 
 
