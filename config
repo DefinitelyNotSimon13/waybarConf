@@ -1,0 +1,121 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // top|left|bottom|right
+    //"height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1920, // Waybar width
+    //"spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["user","hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray","pulseaudio", "network", "cpu","temperature", "memory", "battery","backlight","keyboard-state", "clock", "custom/power"],
+
+    // Modules configuration
+    "keyboard-state": {
+      "numlock": true,
+      "capslock": false,
+      "format": "{icon} {name}",
+      "format-icons": {
+        "locked": "",
+        "unlocked": ""
+      }
+    },
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "on-scroll-up": "hyprctl dispatch workspace e+1",
+      "on-scroll-down": "hyprctl dispatch workspace e-1",
+      "format-icons": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "urgent": "",
+        "active": "",
+        "default": ""
+      },
+      "sort-by-number": true
+    },
+    "hyprland/window": {
+        "format": "➡ {}",
+        "separate-outputs": true
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰁺", "󰁼", "󰁿", "󰂁", "󰁹"]
+    },
+    "network": {
+        "format-wifi": "  {essid} ({signalStrength}%)",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "tooltip-format": " {ifname} via {gwaddr}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click":  "nm-applet"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "" /*" {volume}%"*/,
+        "format-source-muted": "",
+        "reverse-scrolling": true,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "user": {
+      "format": " {user}",
+      "interval": 60,
+      "height": 30,
+      "width": 30,
+      "icon": true,
+    },
+    "custom/power":{
+      "format": "⏻",
+      "tooltip": true,
+      "tooltip-format": "Powermenu",
+      "on-click": "~/.config/rofi/bin/powermenu",
+    },
+    "tray":{
+      "format":"{icon}",
+    },
+    "backlight":{
+      "format": "{icon} {percent}%",
+      "format-icons": ["󰃞"]
+    }
+}
