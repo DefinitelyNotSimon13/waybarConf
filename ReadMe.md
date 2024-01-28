@@ -1,1 +1,1 @@
-Config files for waybar, heavily inspired by [ADDMEPLS]
+https://github.com/DefinitelyNotSimon13/Catppuccin-Dotfiles
