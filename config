@@ -1,6 +1,6 @@
 [{
     "layer": "top", // Waybar at top layer
-      "output": ["DP-1","e-DP1"] ,
+      "output": ["DP-1","eDP-1"] ,
     "position": "top", // top|left|bottom|right
     "margin": "05 05",
     "margin-bottom": -5,
