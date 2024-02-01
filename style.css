@@ -129,12 +129,15 @@ button {
 }
 
 #user {
+  color: @green;
+}
+
+#user.1 {
   margin-right: 0;
   padding-right: 5px;
   border-radius: 0;
   border-top-left-radius: 5em 5em;
   border-bottom-left-radius: 5em 5em;
-  color: @green;
 }
 
 #custom-updates {
@@ -221,5 +224,9 @@ label:focus {
   padding: 0 10px; 
   margin: 0 5px;
   border-radius: 5em / 5em;
+}
+
+#tray.empty {
+  background-color: transparent;
 }
 

@@ -6,7 +6,7 @@
     "margin-bottom": -5,
     "margin-top": 5,
     "modules-left": [
-      "user",
+      "user#1",
       "custom/updates",
       "custom/media",
       "hyprland/window"
@@ -128,7 +128,7 @@
         },
         "on-click": "pavucontrol"
     },
-    "user": {
+    "user#1": {
       "format": " {user}",
       "interval": 60,
       "height": 30,
@@ -187,7 +187,7 @@
     // "width": 1920, // Waybar width
     //"spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["user","hyprland/window"],
+    "modules-left": ["user#2","hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["tray","pulseaudio","keyboard-state", "clock"],
 
@@ -225,7 +225,7 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
-    "user": {
+    "user#2": {
       "format": " {user}",
       "interval": 60,
       "height": 30,
