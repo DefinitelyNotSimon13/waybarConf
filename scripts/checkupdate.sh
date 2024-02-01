@@ -10,5 +10,5 @@ fi
 if (( $UPDATES > 0 ));then
   echo "${UPDATES}"; exit 0
 else
-  echo "System is up to date"; exit 0
+  echo "0"; exit 0
 fi
