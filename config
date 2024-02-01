@@ -142,7 +142,7 @@
       "on-click": "~/.config/rofi/bin/powermenu",
     },
     "tray":{
-      "show-passive-items":true
+      "show-passive-items":true,
       "icon-size": 12,
       "spacing":8,
     },
