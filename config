@@ -37,7 +37,8 @@
       "format": " {}",
       "tooltip": false,
       "interval": 3600,
-      "exec": "exec $HOME/.config/waybar/scripts/checkupdate.sh"
+      "exec": "exec $HOME/.config/waybar/scripts/checkupdate.sh",
+      "on-click": "kitty --hold pacman -Qu"
     },
     "custom/media": {
         "format": "{icon} {}",
@@ -48,7 +49,8 @@
             "default": "󰎈"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" 
+        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null",
+        "on-click": "$HOME/.bin/mpd"
     },    
     "hyprland/workspaces": {
       "format": "{icon}",
@@ -101,7 +103,8 @@
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        "format-icons": ["󰁺", "󰁼", "󰁿", "󰂁", "󰁹"]
+        "format-icons": ["󰁺", "󰁼", "󰁿", "󰂁", "󰁹"],
+        "on-click": "$HOME/.bin/battery"
     },
     "network": {
         "format-wifi": "  {essid} ({signalStrength}%)",
@@ -113,7 +116,6 @@
         "on-click":  "nm-applet"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -130,7 +132,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "$HOME/.bin/volume"
     },
     "user#1": {
       "format": " {user}",
@@ -143,16 +145,17 @@
       "format": "⏻",
       "tooltip": true,
       "tooltip-format": "Powermenu",
-      "on-click": "~/.bin/powermenu",
+      "on-click": "$HOME/.bin/powermenu"
     },
     "tray":{
       "show-passive-items":true,
       "icon-size": 12,
-      "spacing":8,
+      "spacing":8
     },
     "backlight":{
       "format": "{icon} {percent}%",
-      "format-icons": ["󰃞"]
+      "format-icons": ["󰃞"],
+      "on-click": "$HOME/.bin/brightness"
     },
 },
 {
