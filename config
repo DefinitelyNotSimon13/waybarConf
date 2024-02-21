@@ -31,7 +31,9 @@
       "format-icons": {
         "locked": "",
         "unlocked": ""
-      }
+      },
+      "on-click": "eww open dropdown",
+      "on-click-right": "eww close dropdown"
     },
     "custom/updates": {
       "format": " {}",
